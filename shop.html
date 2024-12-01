@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        /* Basic styling for the body and page layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section Styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Navigation Menu Styling */
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Table Layout Styling */
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-spacing: 20px;
+        }
+
+        table td {
+            text-align: center;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        /* Image Styling - Fixed Size */
+        table img {
+            width: 200px;  /* Fixed width for images */
+            height: 200px; /* Fixed height for images */
+            object-fit: cover; /* Maintains aspect ratio, crops image to fit */
+            border-radius: 8px; /* Rounded corners for a sleek look */
+        }
+
+        /* Product Button Styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Total Price Section Styling */
+        .total-price {
+            text-align: center;
+            font-size: 24px;
+            padding: 20px;
+        }
+
+        .total-price p {
+            font-size: 20px;
+        }
+
+        /* Footer Section Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Computer Accessories Shop</h1>
+        <p>Your one-stop shop for all computer accessories!</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="html real.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Shopping Cart</a>
+    </nav>
+
+    <!-- Product Section (Table Layout) -->
+    <table>
+        <tr>
+            <td>
+                <img src="charger.jpg" alt="USB-C Laptop Charger HP">
+                <p>USB-C Laptop Charger HP</p>
+                <p>RM 600.00</p>
+                <button onclick="addToCart('USB-C Laptop Charger HP', 30)">Buy Now</button>
+            </td>
+            <td>
+                <img src="mouse.jpg" alt="HP 430 Multi-Device Wireless Mouse">
+                <p>HP 430 Multi-Device Wireless Mouse</p>
+                <p>RM 349.00</p>
+                <button onclick="addToCart('HP 430 Multi-Device Wireless Mouse', 25)">Buy Now</button>
+            </td>
+            <td>
+                <img src="mousegaming.jpg" alt="GHP 350 Compact Multi-Device Bluetooth Keyboard">
+                <p>GHP 350 Compact Multi-Device Bluetooth Keyboard</p>
+                <p>RM 529.00</p>
+                <button onclick="addToCart('GHP 350 Bluetooth Keyboard', 45)">Buy Now</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="speaker.jpg" alt="HyperX Cloud Stinger Core Wireless">
+                <p>HyperX Cloud Stinger Core Wireless</p>
+                <p>RM 429.00</p>
+                <button onclick="addToCart('HyperX Cloud Stinger Core Wireless', 60)">Buy Now</button>
+            </td>
+            <td>
+                <img src="cable.jpg" alt="HP Universal USB-C Laptop">
+                <p>HP Universal USB-C Laptop</p>
+                <p>RM 365.00</p>
+                <button onclick="addToCart('HP Universal USB-C Laptop', 20)">Buy Now</button>
+            </td>
+            <td>
+                <img src="mic.jpg" alt="HyperX DuoCast USB Microphone">
+                <p>HyperX DuoCast USB Microphone</p>
+                <p>RM 159.90</p>
+                <button onclick="addToCart('HyperX DuoCast USB Microphone', 70)">Buy Now</button>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <img src="webcam.jpg" alt="Poly Studio P5 USB-A Webcam">
+                <p>Poly Studio P5 USB-A Webcam</p>
+                <p>RM 549.00</p>
+                <button onclick="addToCart('Poly Studio P5 USB-A Webcam', 90)">Buy Now</button>
+            </td>
+            <td>
+                <img src="earbuds.jpg" alt="HyperX Cloud Earbuds Black">
+                <p>HyperX Cloud Earbuds Black</p>
+                <p>RM 259.00</p>
+                <button onclick="addToCart('HyperX Cloud Earbuds Black', 40)">Buy Now</button>
+            </td>
+            <td>
+                <img src="dock.jpg" alt="HP ThunderBolt Dock 120W">
+                <p>HP ThunderBolt Dock 120W</p>
+                <p>RM 449.00</p>
+                <button onclick="addToCart('HP ThunderBolt Dock 120W', 150)">Buy Now</button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Total Price Section -->
+    <div class="total-price">
+        <p>Total: RM<span id="totalPrice">0</span></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Computer Accessories Shop. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript to manage cart and total price -->
+    <script>
+        // Initialize total price
+        let total = 0;
+
+        // Function to add items to the cart and update the total price
+        function addToCart(item, price) {
+            total += price;  // Add item price to total
+            document.getElementById("totalPrice").textContent = total.toFixed(2); // Update the total price display
+            alert(item + " has been added to your cart. Total: RM" + total.toFixed(2));  // Show alert for user feedback
+        }
+    </script>
+
+</body>
+</html>
+
